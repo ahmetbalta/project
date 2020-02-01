@@ -1,0 +1,84 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+      <div class="col-sm-4">
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>
+          {{ form.email.label_tag }}
+        </td>
+        <td>
+          {{ form.email }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ form.date_of_birth.label_tag }}
+        </td>
+        <td>
+          {{ form.date_of_birth }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.activite.label_tag }}
+        </td>
+        <td>
+          {{ form.activite }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.kilo.label_tag }}
+        </td>
+        <td>
+          {{ form.kilo}}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.boy.label_tag }}
+        </td>
+        <td>
+          {{ form.boy }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.password1.label_tag }}
+        </td>
+        <td>
+          {{ form.password1 }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.password2.label_tag }}
+        </td>
+        <td>
+          {{ form.password2 }}
+        </td>
+      </tr>
+    </table>
+
+
+
+    <button type="submit">Kaydet</button>
+  </form>
+{% endblock %}
+      </div></div></div>

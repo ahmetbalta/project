@@ -1,0 +1,48 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    {% load static %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'test.css' %}">
+
+</head>
+<body>
+<div id="container" >
+	<div id="banner" >
+        <h1>
+        <table style="width:100%">
+            <tr>
+                <td>
+                <h1> NO-obez</h1>
+                </td>
+                <td>
+ 		         service for a better code
+                </td>
+                <td>
+
+            {% if user.is_authenticated %}
+            {{ user }}
+             <a href="{% url 'logout' %}">logout</a>
+            {% else %}
+            Giriş Yapınız:
+
+             <a href="{% url 'login' %}">login</a>
+
+            {% endif %}
+
+
+            </tr>
+</table></h1>
+	</div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

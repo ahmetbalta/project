@@ -1,0 +1,47 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div id="outer" >
+     <div id="inner">
+          <div id="left" >
+<!--            <h2>Menu left</h2> -->
+
+           </div>
+         <div id="right" >
+<!--	<h2>Menue right</h2> -->
+
+         </div>
+          <div id="content">
+	        <h2>Content / Border -Trick</h2>
+
+<form class="form-group" method="post">
+
+  {% csrf_token %}
+  <table>
+  <tr>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>{{ form.password.label_tag }}</td>
+    <td>{{ form.password }}</td>
+</tr>
+  <tr><td></td><td>
+  <input type="submit" value="Giriş Yap">
+  <input type="hidden" name="next" value="{{ next }}">
+    <a href="{% url 'password_reset' %}">Şifremi unuttum?</a>
+ </td> </tr>
+ </table>
+</form>
+</div>
+          </div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1>in valid code we trust (*^_^*) miss monorom</h1></div>
+
+</div><!-- end container -->
+
+
+{% endblock %}

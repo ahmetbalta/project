@@ -1,0 +1,90 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+ <div id="outer" >
+     <div id="inner">
+          <div id="left" >
+<!--            <h2>Menu left</h2> -->
+
+           </div>
+         <div id="right" >
+<!--	<h2>Menue right</h2> -->
+
+         </div>
+          <div id="content">
+	        <h2>Content / Border -Trick</h2>
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>
+          {{ form.email.label_tag }}
+        </td>
+        <td>
+          {{ form.email }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{ form.date_of_birth.label_tag }}
+        </td>
+        <td>
+          {{ form.date_of_birth }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.activite.label_tag }}
+        </td>
+        <td>
+          {{ form.activite }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.kilo.label_tag }}
+        </td>
+        <td>
+          {{ form.kilo}}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.boy.label_tag }}
+        </td>
+        <td>
+          {{ form.boy }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.password1.label_tag }}
+        </td>
+        <td>
+          {{ form.password1 }}
+        </td>
+      </tr>
+       <tr>
+        <td>
+          {{ form.password2.label_tag }}
+        </td>
+        <td>
+          {{ form.password2 }}
+        </td>
+      </tr>
+    </table>
+
+
+
+    <button type="submit">Kaydet</button>
+  </form>
+               </div>
+          </div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1>in valid code we trust (*^_^*) miss monorom</h1></div>
+
+</div><!-- end container -->
+
+{% endblock %}

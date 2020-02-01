@@ -1,0 +1,76 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div id="outer" >
+ 		<div id="inner">
+          <div id="left" >
+<!--            <h2>Menu left</h2> -->
+
+           </div>
+
+
+
+<div id="right" >
+<!--	<h2>Menue right</h2> -->
+  Hi {{ user }} !
+
+</div>
+
+
+<div id="right" >
+<!--	<h2>Menue right</h2> -->
+
+</div>
+
+
+          <div id="content">
+	        <h2>Content / Border -Trick</h2>
+            {% if user.is_authenticated %}
+            {{ user }}
+
+            {% else %}
+            <p> fitness</p>
+
+              {% endif %}
+          <table>
+               <tr>
+                   <td></td>
+                   <td>Min</td>
+                   <td>Max</td>
+               </tr>
+               <tr>
+                   <td>Kalori</td>
+                   <td>{{ meal.min_calories }}</td>
+                   <td>{{ meal.max_calories }}</td>
+
+                </tr>
+               <tr>
+                   <td>Yağ </td>
+                   <td>{{ meal.min_fat }}</td>
+                   <td>{{ meal.max_fat }}</td>
+
+                </tr>
+              <tr>
+                   <td>Protein </td>
+                   <td>{{ meal.min_protein }}</td>
+                   <td>{{ meal.max_protein }}</td>
+
+                </tr>
+              <tr>
+                   <td>Karbonhidrat </td>
+                   <td>{{ meal.min_carbs }}</td>
+                   <td>{{ meal.max_carbs }}</td>
+
+                </tr>
+</table>
+          </div>
+          </div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1>in valid code we trust (*^_^*) miss monorom</h1></div>
+
+</div><!-- end container -->
+
+{% endblock %}
