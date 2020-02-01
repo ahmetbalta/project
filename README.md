@@ -1,3 +1,3 @@
-# django
+# django web sitesi
 # nutriton
-# deneme
+# turkish
